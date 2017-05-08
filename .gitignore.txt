@@ -1,5 +1,4 @@
-
-# Created by https://www.gitignore.io/api/java,macos,windows,eclipse
+# Created by https://www.gitignore.io/api/java,linux,windows,eclipse
 
 ### Eclipse ###
 
@@ -84,32 +83,20 @@ local.properties
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-### macOS ###
-*.DS_Store
-.AppleDouble
-.LSOverride
+### Linux ###
+*~
 
-# Icon must end with two \r
-Icon
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
 
-# Thumbnails
-._*
+# KDE directory preferences
+.directory
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -132,4 +119,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/java,macos,windows,eclipse
+# End of https://www.gitignore.io/api/java,linux,windows,eclipse
