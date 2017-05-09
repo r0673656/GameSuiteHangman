@@ -50,6 +50,6 @@ public boolean equals(Object object){
 return result;
 }
 public String toString(){
-	return null;
+	return "... heeft als score " + getScore();
 }
 }
