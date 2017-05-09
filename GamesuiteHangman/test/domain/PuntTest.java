@@ -32,7 +32,7 @@ public class PuntTest {
 	
 	@Test
 	public void equals_moet_false_teruggeven_als_parameter_null(){
-		assertFalse(punt.equals(null));
+
 	}
 	
 	@Test
