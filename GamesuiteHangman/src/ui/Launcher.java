@@ -2,6 +2,7 @@ package ui;
 
 import javax.swing.JOptionPane;
 
+import domain.Cirkel;
 import domain.Punt;
 import domain.Speler;
 
@@ -20,7 +21,9 @@ public class Launcher {
 		Punt punt = new Punt(x,y);
 		JOptionPane.showMessageDialog(null, "U heeft een correct punt aangemaakt: " + punt);
 		
-		
+		int straal = Integer.parseInt(JOptionPane.showInputDialog("Radius van de cirkel: "));
+		Cirkel cirkel = new Cirkel(punt, straal);
+		JOptionPane.showMessageDialog(null, "U heeft een correcte cirkel aangemaakt: "+ cirkel);
 	}
 
 }
