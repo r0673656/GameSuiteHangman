@@ -1,5 +1,7 @@
 package domain;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,7 +18,9 @@ public class CirkelTest {
 	
 	@Test
 	public void Cirkel_aanmaken_met_geldig_middelpunt_en_geldige_straal(){
-		Cirkel cirkel = new Cirkel();
+		Cirkel cirkel = new Cirkel(middelpunt, straal);
+		assertEquals(middelpunt, cirkel.getMiddelpunt());
+		assertEquals(straal, cirkel.getStraal());
 		
 	}
 	@Test (expected = IllegalArgumentException.class)
