@@ -6,12 +6,12 @@ public class Speler {
 private String naam;
 private int score;
 
-public Speler(String naam, int score){
-	if (naam==null||naam.trim().isEmpty()||score>=0){
+public Speler(String naam){
+	if (naam==null||naam.trim().isEmpty()||naam==""||score<0){
 		throw new IllegalArgumentException();
 	}
+	
 	this.naam=naam;
-	this.score=score;
 }
 
 public String getNaam() {
@@ -22,11 +22,23 @@ public int getScore() {
 	return score;
 }
 public void addToScore(int score){
-	return score;
+	//if (score < 0){
+	//	throw new IllegalArgumentException("Score moet groter dan 0 zijn.");
+	//}
+	this.score += score;
 }
+@Override
 public boolean equals(Object object){
-	return false;
+	boolean result = false;
+	if(object instanceof Speler){
+		Speler Jan = (Speler) object;
+		
+		if(this.getNaam().equals(Jan.getNaam())&&(this.getScore()==(Jan.getScore())))result = true;
+	}
+	
+return result;
 }
 public String toString(){
 	return null;
+}
 }

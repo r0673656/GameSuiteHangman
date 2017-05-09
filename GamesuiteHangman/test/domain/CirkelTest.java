@@ -1,18 +1,23 @@
 package domain;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import junit.framework.AssertionFailedError;
+
 public class CirkelTest {
 	
 	private Punt middelpunt;
+	
 	private int straal;
 	private Cirkel cirkel;
 	
 	@Before
 	public void setUp() throws Exception{
+		
 		cirkel = new Cirkel(middelpunt, straal);
 	}
 	
@@ -38,9 +43,14 @@ public class CirkelTest {
 	@Test
 	public void Cirkels_gelijk_zelfde_middelpunt_zelfde_straal(){
 		
+		Cirkel andereCirkel = new Cirkel(middelpunt, straal);
+		
+		assertTrue(cirkel.equals(andereCirkel));
 	}
 	@Test
 	public void Cirkels_anders_wanneer_tweede_null(){
+		Cirkel andere = new Cirkel(null);
+		
 		
 	}
 	@Test
