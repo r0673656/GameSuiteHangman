@@ -29,7 +29,10 @@ public class Punt {
 	//-------------------- METHODES --------------------//
 	
 	public boolean equals(Punt punt) {
-		if(punt.getX() == this.x && punt.getY() == this.y) { 
+	
+		if(punt == null) {
+			return false;
+		} else if(punt.getX() == this.x && punt.getY() == this.y) { 
 			return true;
 		}else {
 			return false;
@@ -37,7 +40,7 @@ public class Punt {
 	}
 	
 	public String toString() {
-		return "(" + this.x + "," + this.y + ")";
+		return "(" + this.x + ", " + this.y + ")";
 	}
 	
 }
