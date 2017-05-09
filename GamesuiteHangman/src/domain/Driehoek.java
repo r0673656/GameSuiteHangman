@@ -39,8 +39,11 @@ public class Driehoek {
 	}
 
 	private void setHoekPunt3(Punt hoekPunt3) {
+		
 		if(hoekPunt3 == null){
 			throw new DomainException("hoekpunt3 is null");
+		}else if(((this.hoekPunt2.getX()-this.hoekPunt1.getX())*(hoekPunt3.getY()-this.hoekPunt1.getY()))==((hoekPunt3.getX()-this.hoekPunt1.getX())*(this.hoekPunt2.getY()-this.hoekPunt1.getY()))){
+			throw new DomainException("hoekpunten op zelfde lijn!");
 		}
 		this.hoekPunt3 = hoekPunt3;
 	}
@@ -55,9 +58,6 @@ public class Driehoek {
 		}else{
 			return false;
 		}
-	}
-	
-	//TODO: checken of de drie punten op een lijn liggen, formule op p18 
-		
+	}	
 }
 
