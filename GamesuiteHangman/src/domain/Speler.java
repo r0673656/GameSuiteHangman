@@ -7,6 +7,9 @@ private String naam;
 private int score;
 
 public Speler(String naam, int score){
+	if (naam==null||naam.trim().isEmpty()||score>=0){
+		throw new IllegalArgumentException();
+	}
 	this.naam=naam;
 	this.score=score;
 }
