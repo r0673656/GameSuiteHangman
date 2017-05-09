@@ -4,14 +4,23 @@ package domain;
 public class Speler {
 
 private String naam;
-private int score;
+private int score = 0;
 
 public Speler(String naam){
 	if (naam==null||naam.trim().isEmpty()||naam==""||score<0){
-		throw new IllegalArgumentException();
+		throw new DomainException("");
 	}
 	
 	this.naam=naam;
+	this.score = 0;
+}
+public Speler(String naam, int score){
+	if (naam==null||naam.trim().isEmpty()||naam==""||score<0){
+		throw new DomainException("");
+	}
+	
+	this.naam=naam;
+	this.score = 0;
 }
 
 public String getNaam() {
@@ -22,10 +31,12 @@ public int getScore() {
 	return score;
 }
 public void addToScore(int score){
-	//if (score < 0){
-	//	throw new IllegalArgumentException("Score moet groter dan 0 zijn.");
-	//}
-	this.score += score;
+	
+	if((score += this.score)<0){
+		throw new DomainException("");
+	}
+	
+	this.score = score;
 }
 @Override
 public boolean equals(Object object){
