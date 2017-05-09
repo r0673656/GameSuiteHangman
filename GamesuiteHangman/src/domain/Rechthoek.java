@@ -17,7 +17,7 @@ public class Rechthoek {
 	
 	private void setBreedte(int breedte) {
 		if(breedte <= 0) {
-			throw new IllegalArgumentException("Geen negatieve breedte");
+			throw new DomainException("foute breedte");
 		}else {
 			this.breedte = breedte;
 		}
@@ -29,7 +29,7 @@ public class Rechthoek {
 	
 	private void setHoogte(int hoogte) {
 		if(hoogte <= 0) {
-			throw new IllegalArgumentException("Geen negatieve hoogte");
+			throw new DomainException("foute hoogte");
 		}else {
 			this.hoogte = hoogte;
 		}
@@ -41,7 +41,7 @@ public class Rechthoek {
 	
 	private void setLinkerbovenhoek(Punt linkerbovenhoek) {
 		if(linkerbovenhoek == null) {
-			throw new IllegalArgumentException("Geen lege bovenhoek");
+			throw new DomainException("geen geldige linker bovenhoek");
 		}else {
 			this.linkerbovenhoek = linkerbovenhoek;
 		}
