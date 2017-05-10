@@ -47,9 +47,11 @@ public class PictionaryUI {
 			case "Lijnstuk":
 				LijnStuk l = maakLijnstuk();
 				JOptionPane.showMessageDialog(null, "U heeft een correct lijnstuk aangemaakt: " + l.toString());
+				break;
 			case "Driehoek":
 				Driehoek d = maakDriehoek();
 				JOptionPane.showMessageDialog(null, "U heeft een correcte driehoek aangemaakt: " + d.toString());
+				break;
 			}
 		}
 	}
