@@ -32,15 +32,17 @@ public class PictionaryUI {
 				break;
 			case "Cirkel":
 				Cirkel c = maakCirkel();
-				JOptionPane.showMessageDialog(null, "U heeft een correcte cirkel aangemaakt: "+ cirkel);
+				JOptionPane.showMessageDialog(null, "U heeft een correcte cirkel aangemaakt: "+ c.toString());
 				break;
 			case "Rechthoek":
 				Rechthoek r = maakRechthoek();
-				JOptionPane.showMessageDialog(null, "U heeft een correcte rechthoek aangemaakt: " + rechthoek.);
+				JOptionPane.showMessageDialog(null, "U heeft een correcte rechthoek aangemaakt: " + r.toString());
 				break;
 			}
-		
+		}
+	}
 			protected Rechthoek maakRechthoek(){
+				Rechthoek r = new Rechthoek();
 				try{
 					int xco = Integer.parseInt(JOptionPane.showInputDialog("x-coördinaat van de linkerbovenhoek:"));
 					int yco = Integer.parseInt(JOptionPane.showInputDialog("y-coördinaat van de linkerbovenhoek:"));
@@ -49,14 +51,17 @@ public class PictionaryUI {
 					int breedte = Integer.parseInt(JOptionPane.showInputDialog("Breedte van de rechthoek: "));
 					int hoogte = Integer.parseInt(JOptionPane.showInputDialog("Hoogte van de rechthoek: "));
 					Rechthoek rechthoek = new Rechthoek(linkerbovenhoek, breedte, hoogte);
+					r = rechthoek;
 					
 					} catch(Exception e){
 					e.getMessage();
 				}
-				return rechthoek;
+				return r;
+				
 		}
 		
-		private Cirkel maakCirkel() {
+		protected Cirkel maakCirkel() {
+			Cirkel c = new Cirkel();
 		try{
 			int x = Integer.parseInt(JOptionPane.showInputDialog("x-coördinaat van het punt:"));
 			int y = Integer.parseInt(JOptionPane.showInputDialog("y-coördinaat van het punt:"));
@@ -65,12 +70,13 @@ public class PictionaryUI {
 
 			int straal = Integer.parseInt(JOptionPane.showInputDialog("Radius van de cirkel: "));
 			Cirkel cirkel = new Cirkel(punt, straal);
-			
+			c = cirkel;
 			
 			} catch(Exception e){
 				e.getMessage();
-			}
-			return cirkel;
+			} 
+			return c;
+		
 	}
 
 }

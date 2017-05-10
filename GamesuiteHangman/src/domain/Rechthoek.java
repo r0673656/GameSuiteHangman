@@ -8,6 +8,9 @@ public class Rechthoek{
 		setBreedte(breedte);
 		setHoogte(hoogte);
 	}
+	public Rechthoek(){
+		
+	}
 	
 	//--------------------- GETTERS / SETTERS ---------------------//
 	
