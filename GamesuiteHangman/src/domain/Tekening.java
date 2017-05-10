@@ -1,12 +1,12 @@
 package domain;
 
-public class Tekening {
+public class Tekening{
 	
 	private String naam;
-	private int MIN_X;
-	private int MIN_Y;
-	private int MAX_X;
-	private int MAX_Y;
+	private static final int MIN_X = 0;
+	private static final int MIN_Y = 0;
+	private static final int MAX_X = 399;
+	private static final int MAX_Y = 399;
 	
 	public Tekening(String naam){
 		if(naam == null || naam.trim().isEmpty()){
@@ -35,6 +35,6 @@ public class Tekening {
 	}
 	@Override
 	public boolean equals(Object object){
-	return false;
+		return false;
 	}
 }
