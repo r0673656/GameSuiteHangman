@@ -4,6 +4,9 @@ public class Cirkel extends Vorm{
 	private Punt middelpunt;
 	private int straal;
 	
+	public Cirkel(){
+		
+	}
 	public Cirkel(Punt middelpunt, int straal){
 		
 		super();
