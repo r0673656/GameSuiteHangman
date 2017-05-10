@@ -1,8 +1,11 @@
 package domain;
 
-public class LijnStuk {
+public class LijnStuk extends Vorm{
 	private Punt startpunt, eindpunt;
 	public LijnStuk(Punt startpunt, Punt eindpunt) {
+		
+		super();
+		
 		setEindpunt(eindpunt);
 		setStartpunt(startpunt);
 	}

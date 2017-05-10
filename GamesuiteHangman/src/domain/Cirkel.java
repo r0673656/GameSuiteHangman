@@ -1,10 +1,13 @@
 package domain;
 
-public class Cirkel {
+public class Cirkel extends Vorm{
 	private Punt middelpunt;
 	private int straal;
 	
 	public Cirkel(Punt middelpunt, int straal){
+		
+		super();
+		
 		setMiddelpunt(middelpunt);
 		setStraal(straal);
 	}

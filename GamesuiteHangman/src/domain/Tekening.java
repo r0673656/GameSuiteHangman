@@ -1,6 +1,6 @@
 package domain;
 
-public class Tekening{
+public class Tekening extends Vorm{
 	
 	private String naam;
 	private static final int MIN_X = 0;
@@ -9,10 +9,14 @@ public class Tekening{
 	private static final int MAX_Y = 399;
 	
 	public Tekening(String naam){
+		
+		super();
+		
 		if(naam == null || naam.trim().isEmpty()){
-			throw new DomainException("");
+			throw new IllegalArgumentException("");
 		}
 		this.naam = naam;
+		
 	}
 	public String getNaam() {
 		return naam;
@@ -20,12 +24,30 @@ public class Tekening{
 	public void voegToe(Vorm vorm){
 	}
 	public Vorm getVorm(int index){
+		
+//		return this.vormen.get(index);
+		
 		return null;
+		
 	}
 	public int getAantalVormen(){
-		return 0;
-	}
+		
+//		return this.vormen.size();
+		
+		int som  = 0;
+		
+		for (int i = 0; i < vormen.size();i++){
+			som++;
+		}
+		
+		return som;
+		
+		}
+	
 	public void verwijder(Vorm vorm){
+		
+		this.vormen.remove(vorm);
+		
 	}
 	public boolean bevat(Vorm vorm){
 		return true;
@@ -35,6 +57,17 @@ public class Tekening{
 	}
 	@Override
 	public boolean equals(Object object){
-		return false;
+		boolean result = false;
+		if(object instanceof Tekening){
+			Tekening t = (Tekening) object;
+			
+			if(this.getAantalVormen() == (t.getAantalVormen()) && (this.getNaam().equals(t.getNaam()))){
+				result = true;
+			}
+			
+		}
+		
+	return result;	
+		
 	}
 }

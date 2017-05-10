@@ -1,11 +1,14 @@
 package domain;
 
-public class Driehoek {
+public class Driehoek extends Vorm {
 	private Punt hoekPunt1;
 	private Punt hoekPunt2;
 	private Punt hoekPunt3;
 	
 	public Driehoek(Punt hoekPunt1, Punt hoekPunt2, Punt hoekPunt3){
+		
+		super();
+		
 		setHoekPunt1(hoekPunt1);
 		setHoekPunt2(hoekPunt2);
 		setHoekPunt3(hoekPunt3);
