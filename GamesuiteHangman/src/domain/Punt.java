@@ -28,15 +28,15 @@ public class Punt {
 	
 	//-------------------- METHODES --------------------//
 	
-	public boolean equals(Punt punt) {
-	
-		if(punt == null) {
-			return false;
-		} else if(punt.getX() == this.x && punt.getY() == this.y) { 
-			return true;
-		}else {
-			return false;
+	public boolean equals(Object object){
+		if(object instanceof Punt){
+			Punt o = (Punt) object;
+			if(this.getX() == o.getX() && this.getY() == o.getY()){
+				return true;
+			}
 		}
+		return false;
+		
 	}
 	
 	public String toString() {
