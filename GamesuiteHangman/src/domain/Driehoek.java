@@ -5,6 +5,9 @@ public class Driehoek {
 	private Punt hoekPunt2;
 	private Punt hoekPunt3;
 	
+	public Driehoek(){
+		
+	}
 	public Driehoek(Punt hoekPunt1, Punt hoekPunt2, Punt hoekPunt3){
 		
 		

@@ -3,9 +3,11 @@ package ui;
 import javax.swing.JOptionPane;
 
 import domain.Cirkel;
+import domain.LijnStuk;
 import domain.Punt;
 import domain.Rechthoek;
 import domain.Speler;
+import domain.Driehoek;
 
 public class PictionaryUI {
 	private Speler s;
@@ -23,7 +25,7 @@ public class PictionaryUI {
 	public void toonMenu(){
 		boolean aan = true;
 		while(aan){
-			Object [] shapes = {"Cirkel", "Rechthoek", "Afsluiten"};
+			Object [] shapes = {"Cirkel", "Rechthoek","Punt", "Lijnstuk", "Driehoek", "Afsluiten"};
 			String keuze = (String)JOptionPane.showInputDialog(null, "Wat wilt u tekenen?", "input"
 					, JOptionPane.INFORMATION_MESSAGE, null, shapes, null);
 			switch(keuze){
@@ -38,8 +40,71 @@ public class PictionaryUI {
 				Rechthoek r = maakRechthoek();
 				JOptionPane.showMessageDialog(null, "U heeft een correcte rechthoek aangemaakt: " + r.toString());
 				break;
+			case "Punt":
+				Punt p = maakPunt();
+				JOptionPane.showMessageDialog(null, "U heeft een correct punt aangemaakt: " + p.toString());
+				break;
+			case "Lijnstuk":
+				LijnStuk l = maakLijnstuk();
+				JOptionPane.showMessageDialog(null, "U heeft een correct lijnstuk aangemaakt: " + l.toString());
+				break;
+			case "Driehoek":
+				Driehoek d = maakDriehoek();
+				JOptionPane.showMessageDialog(null, "U heeft een correcte driehoek aangemaakt: " + d.toString());
+				break;
 			}
 		}
+	}
+			private Driehoek maakDriehoek() {
+				Driehoek d = new Driehoek();
+				try{
+					int x = Integer.parseInt(JOptionPane.showInputDialog("x-coördinaat van het eerste hoekpunt:"));
+					int y = Integer.parseInt(JOptionPane.showInputDialog("y-coördinaat van het eerste hoekpunt:"));
+					Punt hoekpunt1 = new Punt(x,y);
+					
+					int xco = Integer.parseInt(JOptionPane.showInputDialog("x-coördinaat van het tweede hoekpunt:"));
+					int yco = Integer.parseInt(JOptionPane.showInputDialog("y-coördinaat van het tweede hoekpunt:"));
+					Punt hoekpunt2 = new Punt(x,y);
+					
+					int xcoo = Integer.parseInt(JOptionPane.showInputDialog("x-coördinaat van het derde hoekpunt:"));
+					int ycoo = Integer.parseInt(JOptionPane.showInputDialog("y-coördinaat van het derde hoekpunt:"));
+					Punt hoekpunt3 = new Punt(x,y);
+					
+					Driehoek driehoek = new Driehoek(hoekpunt1, hoekpunt2, hoekpunt3);
+					d = driehoek;
+				} catch(Exception e){
+					e.getMessage();
+				}
+				return d;
+	}
+			private LijnStuk maakLijnstuk() {
+				LijnStuk l = new LijnStuk();
+				try{
+					int x = Integer.parseInt(JOptionPane.showInputDialog("x-coördinaat van het startpunt:"));
+					int y = Integer.parseInt(JOptionPane.showInputDialog("y-coördinaat van het startpunt:"));
+					Punt startpunt = new Punt(x,y);
+					
+					int xco = Integer.parseInt(JOptionPane.showInputDialog("x-coördinaat van het eindpunt:"));
+					int yco = Integer.parseInt(JOptionPane.showInputDialog("y-coördinaat van het eindpunt:"));
+					Punt eindpunt = new Punt(x,y);
+					LijnStuk lijnstuk = new LijnStuk(startpunt, eindpunt);
+					l = lijnstuk;
+				} catch(Exception e ){
+					e.getMessage();
+				}
+				return l;
+	}
+			protected Punt maakPunt() {
+				Punt p = new Punt();
+				try{
+				int x = Integer.parseInt(JOptionPane.showInputDialog("x-coördinaat van het punt:"));
+				int y = Integer.parseInt(JOptionPane.showInputDialog("y-coördinaat van het punt:"));
+				Punt punt = new Punt(x,y);
+				p = punt;
+				} catch (Exception e){
+					e.getMessage();
+				}
+				return p;
 	}
 			protected Rechthoek maakRechthoek(){
 				Rechthoek r = new Rechthoek();
@@ -66,7 +131,7 @@ public class PictionaryUI {
 			int x = Integer.parseInt(JOptionPane.showInputDialog("x-coördinaat van het punt:"));
 			int y = Integer.parseInt(JOptionPane.showInputDialog("y-coördinaat van het punt:"));
 			Punt punt = new Punt(x,y);
-			JOptionPane.showMessageDialog(null, "U heeft een correct punt aangemaakt: " + punt);
+			
 
 			int straal = Integer.parseInt(JOptionPane.showInputDialog("Radius van de cirkel: "));
 			Cirkel cirkel = new Cirkel(punt, straal);
