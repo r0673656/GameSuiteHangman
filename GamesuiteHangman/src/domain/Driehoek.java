@@ -50,14 +50,44 @@ public class Driehoek {
 	
 	//Methodes
 	
-	public boolean equals(Driehoek driehoek){
-		if(driehoek == null){
-			return false;
-		}else if(driehoek.getHoekPunt1().equals(this.hoekPunt1) && driehoek.getHoekPunt2().equals(this.hoekPunt2) && driehoek.getHoekPunt3().equals(this.hoekPunt3)){
-			return true;
-		}else{
-			return false;
+	
+	
+	public boolean equals(Object object){
+		if(object instanceof Driehoek){
+			Driehoek o = (Driehoek) object;
+			if(o.getHoekPunt1().equals(this.hoekPunt1) && o.getHoekPunt2().equals(this.hoekPunt2) && o.getHoekPunt3().equals(this.hoekPunt3)){
+				return true;
+			}
 		}
-	}	
+		return false;
+		
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

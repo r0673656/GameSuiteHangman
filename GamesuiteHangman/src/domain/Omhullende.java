@@ -68,14 +68,15 @@ public class Omhullende {
 	
 	//----------------METHODS------------------//
 	
-	public boolean equals(Omhullende omhullende) {
-		if (omhullende == null ) {
-			return false;
-		}else if (omhullende.positieLinksBoven.equals(this.positieLinksBoven) && omhullende.breedte == this.breedte && omhullende.hoogte == this.hoogte) {
-			return true;
-		}else {
-			return false;
+	public boolean equals(Object object){
+		if(object instanceof Omhullende){
+			Omhullende o = (Omhullende) object;
+			if(o.positieLinksBoven.equals(this.positieLinksBoven) && o.breedte == this.breedte && o.hoogte == this.hoogte){
+				return true;
+			}
 		}
+		return false;
+		
 	}
 	
 	public String toString() {
