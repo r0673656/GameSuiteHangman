@@ -4,6 +4,8 @@ public class Rechthoek{
 	private int breedte, hoogte;
 	private Punt linkerbovenhoek;
 	public Rechthoek(Punt linkerbovenhoek, int breedte, int hoogte) {
+
+		
 		setLinkerbovenhoek(linkerbovenhoek);
 		setBreedte(breedte);
 		setHoogte(hoogte);
@@ -68,9 +70,9 @@ public class Rechthoek{
 		return "Rechthoek: positie: " + this.linkerbovenhoek.toString() + " - breedte: " + this.breedte + " - hoogte: " + this.hoogte + "\nOmhullende: " + this.getOmhullende().getLinkerBovenhoek().toString() + " - " + this.getOmhullende().getBreedte() + " - " + this.getOmhullende().getHoogte();
 	}
 	
-	public Rechthoek getOmhullende(){
-		Rechthoek r = new Rechthoek(this.linkerbovenhoek, this.breedte, this.hoogte);
-		return r;
+	public Omhullende getOmhullende(){
+		Omhullende o = new Omhullende(this.linkerbovenhoek, this.breedte, this.hoogte);
+		return o;
 	}
 	
 }

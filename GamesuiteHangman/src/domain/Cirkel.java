@@ -1,6 +1,6 @@
 package domain;
 
-public class Cirkel {
+public class Cirkel{
 	private Punt middelpunt;
 	private int straal;
 	
@@ -8,6 +8,8 @@ public class Cirkel {
 		
 	}
 	public Cirkel(Punt middelpunt, int straal){
+		
+		
 		setMiddelpunt(middelpunt);
 		setStraal(straal);
 	}

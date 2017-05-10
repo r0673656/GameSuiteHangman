@@ -1,6 +1,6 @@
 package domain;
 
-public class LijnStuk {
+public class LijnStuk{
 	private Punt startpunt, eindpunt;
 	
 	
@@ -8,6 +8,9 @@ public class LijnStuk {
 		
 	}
 	public LijnStuk(Punt startpunt, Punt eindpunt) {
+		
+		
+		
 		setEindpunt(eindpunt);
 		setStartpunt(startpunt);
 	}
@@ -57,4 +60,7 @@ public class LijnStuk {
 		return "Lijn: startpunt: " + startpunt.toString() + " - eindpunt: " + eindpunt.toString();
 	}
 	
+	public Omhullende getOmHullende(){
+		
+	}
 }

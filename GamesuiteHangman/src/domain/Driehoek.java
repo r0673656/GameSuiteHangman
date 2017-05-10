@@ -9,6 +9,8 @@ public class Driehoek {
 		
 	}
 	public Driehoek(Punt hoekPunt1, Punt hoekPunt2, Punt hoekPunt3){
+		
+		
 		setHoekPunt1(hoekPunt1);
 		setHoekPunt2(hoekPunt2);
 		setHoekPunt3(hoekPunt3);
