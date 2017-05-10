@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.ArrayList;
+
 public class Tekening extends Vorm{
 	
 	private String naam;
@@ -7,6 +9,7 @@ public class Tekening extends Vorm{
 	private static final int MIN_Y = 0;
 	private static final int MAX_X = 399;
 	private static final int MAX_Y = 399;
+	public ArrayList<Vorm> vormen;
 	
 	public Tekening(String naam){
 		
