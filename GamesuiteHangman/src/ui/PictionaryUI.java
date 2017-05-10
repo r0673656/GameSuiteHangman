@@ -86,7 +86,7 @@ public class PictionaryUI {
 					
 					int xco = Integer.parseInt(JOptionPane.showInputDialog("x-coördinaat van het eindpunt:"));
 					int yco = Integer.parseInt(JOptionPane.showInputDialog("y-coördinaat van het eindpunt:"));
-					Punt eindpunt = new Punt(x,y);
+					Punt eindpunt = new Punt(xco,yco);
 					LijnStuk lijnstuk = new LijnStuk(startpunt, eindpunt);
 					l = lijnstuk;
 				} catch(Exception e ){
