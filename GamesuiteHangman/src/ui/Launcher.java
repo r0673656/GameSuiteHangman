@@ -21,8 +21,11 @@ public class Launcher {
 		Object [] shapes = {"Cirkel", "Rechthoek", "Afsluiten"};
 				Object keuze = JOptionPane.showInputDialog(null, "Wat wilt u tekenen?", "input"
 						, JOptionPane.INFORMATION_MESSAGE, null, shapes, null);
-			switch(){
+				String keuze1 = keuze.toString();
+				
+			switch(keuze1){
 			case "Afsluiten":
+				
 				
 				break;
 			case "Cirkel":
@@ -37,7 +40,8 @@ public class Launcher {
 			
 			}
 
-		protected void maakCirkel(){
+		protected void maakCirkel(String uit){
+			try{
 			int x = Integer.parseInt(JOptionPane.showInputDialog("x-coördinaat van het punt:"));
 			int y = Integer.parseInt(JOptionPane.showInputDialog("y-coördinaat van het punt:"));
 			Punt punt = new Punt(x,y);
@@ -46,6 +50,10 @@ public class Launcher {
 			int straal = Integer.parseInt(JOptionPane.showInputDialog("Radius van de cirkel: "));
 			Cirkel cirkel = new Cirkel(punt, straal);
 			JOptionPane.showMessageDialog(null, "U heeft een correcte cirkel aangemaakt: "+ cirkel);
+			}
+			catch(Exception e){
+				e.getMessage();
+			}
 		}
 		protected void maakRechthoek(){
 			int xco = Integer.parseInt(JOptionPane.showInputDialog("x-coördinaat van de linkerbovenhoek:"));
