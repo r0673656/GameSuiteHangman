@@ -64,11 +64,11 @@ public class PictionaryUI {
 					
 					int xco = Integer.parseInt(JOptionPane.showInputDialog("x-coördinaat van het tweede hoekpunt:"));
 					int yco = Integer.parseInt(JOptionPane.showInputDialog("y-coördinaat van het tweede hoekpunt:"));
-					Punt hoekpunt2 = new Punt(x,y);
+					Punt hoekpunt2 = new Punt(xco,yco);
 					
 					int xcoo = Integer.parseInt(JOptionPane.showInputDialog("x-coördinaat van het derde hoekpunt:"));
 					int ycoo = Integer.parseInt(JOptionPane.showInputDialog("y-coördinaat van het derde hoekpunt:"));
-					Punt hoekpunt3 = new Punt(x,y);
+					Punt hoekpunt3 = new Punt(xcoo,ycoo);
 					
 					Driehoek driehoek = new Driehoek(hoekpunt1, hoekpunt2, hoekpunt3);
 					d = driehoek;
