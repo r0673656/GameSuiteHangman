@@ -7,6 +7,9 @@ public class Punt {
 		setX(x);
 		setY(y);
 	}
+	public Punt(){
+		
+	}
 
 	//---------------- GETTERS / SETTERS ----------------//
 	

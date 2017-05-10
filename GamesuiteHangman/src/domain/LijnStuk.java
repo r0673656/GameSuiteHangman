@@ -2,6 +2,11 @@ package domain;
 
 public class LijnStuk {
 	private Punt startpunt, eindpunt;
+	
+	
+	public LijnStuk(){
+		
+	}
 	public LijnStuk(Punt startpunt, Punt eindpunt) {
 		setEindpunt(eindpunt);
 		setStartpunt(startpunt);
