@@ -35,15 +35,18 @@ public class LijnStuk {
 	
 	//---------------------- METHODES ----------------------------//
 	
-	public boolean equals(LijnStuk lijnstuk) {
-		if(lijnstuk == null) {
-			return false;
-		}else if(lijnstuk.getStartPunt().equals(this.startpunt) && lijnstuk.getEindPunt().equals(this.eindpunt)) {
-			return true;
-		}else {
-			return false;
+
+	public boolean equals(Object object){
+		if(object instanceof LijnStuk){
+			LijnStuk o = (LijnStuk) object;
+			if(o.getStartPunt().equals(this.startpunt) && o.getEindPunt().equals(this.eindpunt)){
+				return true;
+			}
 		}
+		return false;
+		
 	}
+	
 	
 	public String toString() {
 		return "Lijn: startpunt: " + startpunt.toString() + " - eindpunt: " + eindpunt.toString();

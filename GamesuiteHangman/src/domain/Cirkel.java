@@ -28,17 +28,21 @@ public class Cirkel {
 			throw new IllegalArgumentException("Straal is strikt positief!");
 		}
 	}
-	public boolean equals(Cirkel cirkel){
-		if(cirkel == null){
-			return false;
+	
+	
+	public boolean equals(Object object){
+		if(object instanceof Cirkel){
+			Cirkel o = (Cirkel) object;
+			if(this.getMiddelpunt() == o.getMiddelpunt() && this.getStraal() == o.getStraal()){
+				return true;
+			}
 		}
-		else if (this.getMiddelpunt() == cirkel.getMiddelpunt() && this.getStraal() == cirkel.getStraal()){
-			return true;
-		}
-		else{
-			return false;
-		}
+		return false;
+		
 	}
+	
+	
+	
 	public String toString(){
 		return "Cirkel: middelPunt: " + this.getMiddelpunt() + " - straal: " + this.getStraal();
 	}

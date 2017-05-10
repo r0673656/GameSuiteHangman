@@ -1,6 +1,6 @@
 package domain;
 
-public class Rechthoek {
+public class Rechthoek{
 	private int breedte, hoogte;
 	private Punt linkerbovenhoek;
 	public Rechthoek(Punt linkerbovenhoek, int breedte, int hoogte) {
@@ -49,14 +49,16 @@ public class Rechthoek {
 	
 	//------------------------ METHODES --------------------------//
 	
-	public boolean equals(Rechthoek rechthoek) {
-		if(rechthoek == null) {
-			return false;
-		}else if(rechthoek.getBreedte() == this.breedte && rechthoek.getHoogte() == this.hoogte && rechthoek.getLinkerBovenhoek().equals(this.linkerbovenhoek)) {
-			return true;
-		}else {
-			return false;
+	
+	public boolean equals(Object object){
+		if(object instanceof Rechthoek){
+			Rechthoek o = (Rechthoek) object;
+			if(o.getBreedte() == this.breedte && o.getHoogte() == this.hoogte && o.getLinkerBovenhoek().equals(this.linkerbovenhoek)){
+				return true;
+			}
 		}
+		return false;
+		
 	}
 	
 	public String toString() {
