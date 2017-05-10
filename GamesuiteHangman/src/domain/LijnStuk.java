@@ -56,6 +56,27 @@ public class LijnStuk{
 	}
 	
 	public Omhullende getOmHullende(){
+		int minX,maxY,breedte,hoogte;
+		
+		if(this.startpunt.getX() < this.eindpunt.getX()){
+			minX = startpunt.getX();
+		}else{
+			minX = eindpunt.getX();
+		}
+		
+		if(this.startpunt.getY() > this.eindpunt.getY()){
+			maxY = startpunt.getY();
+		}else{
+			maxY = eindpunt.getY();
+		}
+		
+		Punt linkerbovenpunt = new Punt(minX,maxY);
+		breedte = Math.abs(startpunt.getX()-eindpunt.getX());
+		hoogte = Math.abs(startpunt.getY()-eindpunt.getY());
+		
+		Omhullende o = new Omhullende(linkerbovenpunt, breedte, hoogte);
+		
+		return o;
 		
 	}
 }

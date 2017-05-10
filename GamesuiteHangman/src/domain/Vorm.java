@@ -2,8 +2,8 @@ package domain;
 
 import java.util.ArrayList;
 
-public abstract class Vorm {
-	public abstract Omhullende getOmhullende();
+public class Vorm {
+	public ArrayList<Vorm> vormen;
 	
 	@Override
 	public boolean equals(Object object){

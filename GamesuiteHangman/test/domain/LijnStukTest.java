@@ -42,5 +42,10 @@ public class LijnStukTest {
 		LijnStuk lijnStuk = new LijnStuk(punt1, punt2);
 		assertFalse(lijnStuk.equals(null));
 	}
+	
+	@Test
+	public void getOmhullende_geeft_correcte_omhullende(){
+		//TODO
+	}
 }
 	
