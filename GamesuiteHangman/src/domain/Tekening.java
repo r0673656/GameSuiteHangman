@@ -1,19 +1,19 @@
 package domain;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Tekening extends Vorm{
+public class Tekening{
 	
 	private String naam;
 	private static final int MIN_X = 0;
 	private static final int MIN_Y = 0;
 	private static final int MAX_X = 399;
 	private static final int MAX_Y = 399;
-	public ArrayList<Vorm> vormen;
+	public List<Vorm> vormen = new ArrayList<Vorm>();
 	
 	public Tekening(String naam){
 		
-		super();
 		
 		if(naam == null || naam.trim().isEmpty()){
 			throw new IllegalArgumentException("");
@@ -28,32 +28,22 @@ public class Tekening extends Vorm{
 	}
 	public Vorm getVorm(int index){
 		
-//		return this.vormen.get(index);
+		return vormen.get(index);
 		
-		return null;
 		
 	}
 	public int getAantalVormen(){
 		
-//		return this.vormen.size();
+		return vormen.size();
 		
-		int som  = 0;
-		
-		for (int i = 0; i < vormen.size();i++){
-			som++;
-		}
-		
-		return som;
-		
-		}
-	
+	}
 	public void verwijder(Vorm vorm){
 		
-		this.vormen.remove(vorm);
+		vormen.remove(vorm);
 		
 	}
 	public boolean bevat(Vorm vorm){
-		return true;
+		return vormen.contains(vorm);
 	}
 	public String toString(){
 		return null;
@@ -73,4 +63,5 @@ public class Tekening extends Vorm{
 	return result;	
 		
 	}
+	
 }
