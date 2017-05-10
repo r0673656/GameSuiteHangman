@@ -59,12 +59,16 @@ public class Omhullende {
 	}
 	
 	public int getMinY() {
-		return positieLinksBoven.getY();
+		return positieLinksBoven.getY() - hoogte;
 	}
 	
 	public int getMaxY() {
-		return positieLinksBoven.getY() + hoogte;
+		return positieLinksBoven.getY();
 	}
+	
+	//public Rechthoek getOmhullende() {
+		
+	//}
 	
 	//----------------METHODS------------------//
 	
@@ -82,6 +86,8 @@ public class Omhullende {
 	public String toString() {
 		return "Omhullende: " + positieLinksBoven.toString() + " " + this.breedte + " - " + this.hoogte;
 	}
+	
+	
 	
 }
 
