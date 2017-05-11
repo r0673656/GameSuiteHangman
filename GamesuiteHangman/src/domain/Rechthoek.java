@@ -1,6 +1,10 @@
 package domain;
 
-public class Rechthoek extends Vorm{
+import java.awt.BasicStroke;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
+public class Rechthoek extends Vorm implements Drawable{
 	private int breedte, hoogte;
 	private Punt linkerbovenhoek;
 	public Rechthoek(Punt linkerbovenhoek, int breedte, int hoogte) {
@@ -74,6 +78,19 @@ public class Rechthoek extends Vorm{
 	public Omhullende getOmhullende(){
 		Omhullende o = new Omhullende(this.linkerbovenhoek, this.breedte, this.hoogte);
 		return o;
+	}
+	@Override
+	public void teken(Graphics graphics) {
+		// TODO Auto-generated method stub
+		Graphics2D graphics2D = (Graphics2D) graphics;
+		graphics2D.setStroke(new BasicStroke(5));
+		
+		Rechthoek r = new Rechthoek(new Punt(100, 200), 200, 180);
+		graphics.drawRect(r.getLinkerBovenhoek().getX(), r
+				.getLinkerBovenhoek().getY(), r.getBreedte(), r
+				.getHoogte());
+		
+		
 	}
 	
 }
