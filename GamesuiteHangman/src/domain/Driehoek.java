@@ -68,6 +68,26 @@ public class Driehoek {
 		
 	}
 	
+	public Omhullende getOmHullende() {
+		int minX,maxY,maxX, minY, breedte, hoogte;
+		Punt linkerbovenpunt;
+		
+		minX = Math.min(Math.min(hoekPunt1.getX(), hoekPunt2.getX()), hoekPunt3.getX());
+		maxY = Math.max(Math.max(hoekPunt1.getY(), hoekPunt2.getY()), hoekPunt3.getY());
+		maxX = Math.max(Math.max(hoekPunt1.getX(), hoekPunt2.getX()), hoekPunt3.getX());
+		minY = Math.min(Math.min(hoekPunt1.getY(), hoekPunt2.getY()), hoekPunt3.getY());
+		
+		Punt p = new Punt(minX, maxY);
+		
+		breedte = maxX - minX;
+		hoogte = maxY - minY;
+		
+		Omhullende o = new Omhullende(p, breedte, hoogte);
+		
+		return o;
+		
+	}
+	
 }
 
 
