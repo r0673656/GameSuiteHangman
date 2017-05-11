@@ -7,10 +7,13 @@ import domain.LijnStuk;
 import domain.Punt;
 import domain.Rechthoek;
 import domain.Speler;
+import domain.Tekening;
 import domain.Driehoek;
 
 public class PictionaryUI {
 	private Speler s;
+	private Tekening tekening;
+	
 	
 	public PictionaryUI(Speler s){
 		setSpeler(s);
@@ -143,5 +146,9 @@ public class PictionaryUI {
 			return c;
 		
 	}
+		GameMainWindow view = new GameMainWindow(s.getNaam(), tekening);
+		view.setVisible(true);
+		view.teken();
+		
 
 }

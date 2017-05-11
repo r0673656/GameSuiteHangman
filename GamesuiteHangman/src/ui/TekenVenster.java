@@ -12,6 +12,7 @@ import domain.LijnStuk;
 import domain.Punt;
 import domain.Rechthoek;
 import domain.Tekening;
+import domain.UiException;
 
 public class TekenVenster extends Canvas{
 	private static final long serialVersionUID = 1L;
@@ -21,7 +22,7 @@ public class TekenVenster extends Canvas{
 		this.setPreferredSize(new Dimension(400, 400));
 		setTekening(tekening);
 	}
-
+	
 	private void setTekening(Tekening tekening) {
 		if (tekening == null)
 			throw new UiException("Tekening mag niet null zijn");

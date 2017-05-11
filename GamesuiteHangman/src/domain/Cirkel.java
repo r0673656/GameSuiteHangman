@@ -1,5 +1,7 @@
 package domain;
 
+import java.awt.Graphics;
+
 public class Cirkel extends Vorm{
 	private Punt middelpunt;
 	private int straal;
@@ -45,9 +47,6 @@ public class Cirkel extends Vorm{
 		return false;
 		
 	}
-	
-	
-	
 	public String toString(){
 		return "Cirkel: middelPunt: " + this.getMiddelpunt() + " - straal: " + this.getStraal() + "\n" + getOmhullende().toString();
 	}
