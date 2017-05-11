@@ -5,6 +5,9 @@ public class Driehoek extends Vorm{
 	private Punt hoekPunt2;
 	private Punt hoekPunt3;
 	
+	public Driehoek(){
+		
+	}
 	public Driehoek(Punt hoekPunt1, Punt hoekPunt2, Punt hoekPunt3){
 		
 		
@@ -67,6 +70,11 @@ public class Driehoek extends Vorm{
 
 	@Override
 	public Omhullende getOmhullende() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public String toString() {
 		// TODO Auto-generated method stub
 		return null;
 	}
