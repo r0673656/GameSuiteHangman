@@ -57,19 +57,11 @@ public class LijnStuk extends Vorm{
 	
 	
 	public String toString() {
-		return "Lijn: startpunt: " + startpunt.toString() + " - eindpunt: " + eindpunt.toString();
+		return "Lijn: startpunt: " + startpunt.toString() + " - eindpunt: " + eindpunt.toString() + "\n" + this.getOmhullende().toString();
 	}
-	
-
-
 
 	@Override
-	public Omhullende getOmhullende() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Omhullende getOmHullende(){
+	public Omhullende getOmhullende(){
 		int minX,maxY,breedte,hoogte;
 		
 		if(this.startpunt.getX() < this.eindpunt.getX()){

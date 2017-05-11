@@ -49,11 +49,20 @@ public class Cirkel extends Vorm{
 	
 	
 	public String toString(){
-		return "Cirkel: middelPunt: " + this.getMiddelpunt() + " - straal: " + this.getStraal();
+		return "Cirkel: middelPunt: " + this.getMiddelpunt() + " - straal: " + this.getStraal() + "\n" + getOmhullende().toString();
 	}
+	
 	@Override
 	public Omhullende getOmhullende() {
-		// TODO Auto-generated method stub
-		return null;
+		int minX,maxY;
+		
+		minX = this.middelpunt.getX() - straal;
+		maxY = this.middelpunt.getY() + straal;
+		
+		Punt p = new Punt(minX,maxY);
+		
+		Omhullende o = new Omhullende(p, this.straal*2, this.straal*2);
+		return o;
 	}
+	
 }
