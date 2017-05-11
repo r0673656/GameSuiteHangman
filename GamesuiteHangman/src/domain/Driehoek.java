@@ -70,14 +70,12 @@ public class Driehoek extends Vorm{
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Driehoek: hoekpunt1 " + this.hoekPunt1.toString() + " - hoekpunt2: " + this.hoekPunt2.toString() + " - hoekpunt3: " + this.hoekPunt3.toString() + this.getOmhullende().toString();
 	}
 	
 	@Override
 	public Omhullende getOmhullende() {
 		int minX,maxY,maxX, minY, breedte, hoogte;
-		Punt linkerbovenpunt;
 		
 		minX = Math.min(Math.min(hoekPunt1.getX(), hoekPunt2.getX()), hoekPunt3.getX());
 		maxY = Math.max(Math.max(hoekPunt1.getY(), hoekPunt2.getY()), hoekPunt3.getY());
@@ -92,7 +90,6 @@ public class Driehoek extends Vorm{
 		Omhullende o = new Omhullende(p, breedte, hoogte);
 		
 		return o;
-		
 	}
 	
 }
