@@ -1,8 +1,11 @@
 package domain;
 
+import java.awt.BasicStroke;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Dimension;
 
-public class Cirkel extends Vorm{
+public class Cirkel extends Vorm implements Drawable{
 	private Punt middelpunt;
 	private int straal;
 	
@@ -62,6 +65,17 @@ public class Cirkel extends Vorm{
 		
 		Omhullende o = new Omhullende(p, this.straal*2, this.straal*2);
 		return o;
+	}
+	@Override
+	public void teken(Graphics graphics) {
+		// TODO Auto-generated method stub
+		Graphics2D graphics2D = (Graphics2D) graphics;
+		graphics2D.setStroke(new BasicStroke(5));
+
+		Cirkel cirkel = new Cirkel(new Punt(70, 70), 60);
+		cirkel.drawOval(cirkel.getOmhullende().getMinX(), cirkel
+				.getOmhullende().getMinY(), cirkel.getOmhullende()
+				.getBreedte(), cirkel.getOmhullende().getHoogte());
 	}
 	
 }
