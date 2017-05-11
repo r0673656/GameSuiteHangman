@@ -146,9 +146,9 @@ public class PictionaryUI {
 			return c;
 		
 	}
-		GameMainWindow view = new GameMainWindow(s.getNaam(), tekening);
+/*		GameMainWindow view = new GameMainWindow(s.getNaam(), tekening);
 		view.setVisible(true);
-		view.teken();
+		view.teken();*/
 		
 
 }
