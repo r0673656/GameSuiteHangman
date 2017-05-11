@@ -16,6 +16,7 @@ public class TekeningTest {
 	private Vorm raambalk1;
 	private Vorm raambalk2;
 	private Vorm schouwNietInTekening;
+//	private Vorm fouteVorm;
 	
 	@Before
 	public void setUp() {
@@ -102,7 +103,6 @@ public class TekeningTest {
 		assertTrue(huis.equals(huisMetSchouw));
 	}
 
-
 	public Tekening createHuisMetSchouw() {
 		Tekening huisMetSchouw = new Tekening("huisMetSchouw");
 		huisMetSchouw.voegToe(gebouw);
@@ -139,5 +139,11 @@ public class TekeningTest {
 		huisMetSchouwZonderDeur.voegToe(schouwNietInTekening);
 		return huisMetSchouwZonderDeur;
 	}
+	
+//	@Test (expected = IllegalArgumentException.class)
+//	public void vorm_Met_X_Kleiner_Dan_Min_X_Gooit_Exception(){
+//		Tekening tekening = new Tekening("dskqfjlm");
+//		tekening.voegToe(fouteVorm);
+//	}
 
 }

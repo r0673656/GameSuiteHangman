@@ -22,6 +22,15 @@ public class Tekening{
 		return naam;
 	}
 	public void voegToe(Vorm vorm){
+//		if(vorm == null) {
+//			throw new DomainException("Ongeldige vorm");
+//		}
+//		else if (vorm.getOmhullende().getMinX() >= Tekening.MIN_X && vorm.getOmhullende().getMaxX() <= Tekening.MAX_X && vorm.getOmhullende().getMinY() >= Tekening.MIN_Y && vorm.getOmhullende().getMaxY() <= Tekening.MAX_Y){
+//			vormen.add(vorm);
+//		}
+//		else{
+//			throw new IllegalArgumentException("Ongeldige grenzen");
+//		}
 		vormen.add(vorm);
 	}
 	public Vorm getVorm(int index){
@@ -40,7 +49,11 @@ public class Tekening{
 		return vormen.contains(vorm);
 	}
 	public String toString(){
-		return null;
+		String info = "Tekening met naam " + naam + " bestaat uit " + vormen.size() + " vormen: \n";
+		for(Vorm vorm : vormen) {
+			info += vorm + "\n";
+		}
+		return info;
 	}
 	@Override
 	public boolean equals(Object object) {
@@ -62,5 +75,4 @@ public class Tekening{
 		return false;
 	}
 
-	
 }

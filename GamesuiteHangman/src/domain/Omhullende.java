@@ -86,19 +86,4 @@ public class Omhullende {
 	public String toString() {
 		return "Omhullende: " + positieLinksBoven.toString() + " " + this.breedte + " - " + this.hoogte;
 	}
-	
-	
-	
 }
-
-
-
-
-
-
-
-
-
-
-
-
