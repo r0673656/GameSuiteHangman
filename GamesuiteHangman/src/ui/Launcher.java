@@ -10,7 +10,6 @@ import domain.Speler;
 public class Launcher {
 
 	public static void main(String[] args) {
-		
 		Speler s = new Speler(maakSpeler());
 		PictionaryUI ui = new PictionaryUI(s);
 		ui.toonMenu();
@@ -27,6 +26,4 @@ public class Launcher {
 			}
 			return naam;
 		}
-		
-		
 	}
