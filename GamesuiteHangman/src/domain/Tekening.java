@@ -10,7 +10,7 @@ public class Tekening{
 	private static final int MIN_Y = 0;
 	private static final int MAX_X = 399;
 	private static final int MAX_Y = 399;
-	public List<Vorm> vormen = new ArrayList<Vorm>();
+	public ArrayList<Vorm> vormen = new ArrayList<>();
 	
 	public Tekening(String naam){
 		
@@ -25,6 +25,7 @@ public class Tekening{
 		return naam;
 	}
 	public void voegToe(Vorm vorm){
+		vormen.add(vorm);
 	}
 	public Vorm getVorm(int index){
 		
@@ -36,6 +37,9 @@ public class Tekening{
 		
 		return vormen.size();
 		
+	}
+	public ArrayList<Vorm> getAlleVormen(){
+		return vormen;
 	}
 	public void verwijder(Vorm vorm){
 		

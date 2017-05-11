@@ -1,6 +1,6 @@
 package domain;
 
-public class LijnStuk{
+public class LijnStuk extends Vorm{
 	private Punt startpunt, eindpunt;
 	
 	
@@ -60,6 +60,15 @@ public class LijnStuk{
 		return "Lijn: startpunt: " + startpunt.toString() + " - eindpunt: " + eindpunt.toString();
 	}
 	
+
+
+
+	@Override
+	public Omhullende getOmhullende() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public Omhullende getOmHullende(){
 		int minX,maxY,breedte,hoogte;
 		
@@ -83,5 +92,6 @@ public class LijnStuk{
 		
 		return o;
 		
+
 	}
 }

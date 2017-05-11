@@ -1,6 +1,6 @@
 package domain;
 
-public class Rechthoek{
+public class Rechthoek extends Vorm{
 	private int breedte, hoogte;
 	private Punt linkerbovenhoek;
 	public Rechthoek(Punt linkerbovenhoek, int breedte, int hoogte) {

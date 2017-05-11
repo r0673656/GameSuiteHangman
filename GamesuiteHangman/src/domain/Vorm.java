@@ -2,16 +2,10 @@ package domain;
 
 import java.util.ArrayList;
 
-public class Vorm {
-	public ArrayList<Vorm> vormen;
-	
-	@Override
-	public boolean equals(Object object){
-		boolean result = false;
-		
-	return result;
-	}
-	public String toString(){
-		return null;
-	}
+
+public abstract class Vorm {
+	public abstract Omhullende getOmhullende();
+	public abstract boolean equals(Object object);
+	public abstract String toString();
+
 }

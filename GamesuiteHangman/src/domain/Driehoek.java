@@ -1,6 +1,6 @@
 package domain;
 
-public class Driehoek {
+public class Driehoek extends Vorm{
 	private Punt hoekPunt1;
 	private Punt hoekPunt2;
 	private Punt hoekPunt3;
@@ -66,6 +66,17 @@ public class Driehoek {
 		}
 		return false;
 		
+	}
+
+	@Override
+	public Omhullende getOmhullende() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	public Omhullende getOmHullende() {

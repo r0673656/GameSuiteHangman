@@ -49,9 +49,10 @@ public class TekeningTest {
 	@Test 
 	public void getAantalVormen_moet_aantal_vormen_teruggeven() {
 		Tekening huis = createHuisZonderShouw();
+		
 		assertEquals(7, huis.getAantalVormen());
 	}
-
+    
 	@Test
 	public void bevat_geeft_true_als_gegeven_vorm_deel_uitmaakt_van_de_tekening(){
 		Tekening huis = createHuisZonderShouw();
