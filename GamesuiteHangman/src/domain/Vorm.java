@@ -4,14 +4,7 @@ import java.util.ArrayList;
 
 public abstract class Vorm {
 	public abstract Omhullende getOmhullende();
+	public abstract boolean equals(Object object);
+	public abstract String toString();
 	
-	@Override
-	public boolean equals(Object object){
-		boolean result = false;
-		
-	return result;
-	}
-	public String toString(){
-		return null;
-	}
 }

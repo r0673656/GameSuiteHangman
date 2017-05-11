@@ -1,6 +1,6 @@
 package domain;
 
-public class Cirkel{
+public class Cirkel extends Vorm{
 	private Punt middelpunt;
 	private int straal;
 	
@@ -50,5 +50,10 @@ public class Cirkel{
 	
 	public String toString(){
 		return "Cirkel: middelPunt: " + this.getMiddelpunt() + " - straal: " + this.getStraal();
+	}
+	@Override
+	public Omhullende getOmhullende() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
