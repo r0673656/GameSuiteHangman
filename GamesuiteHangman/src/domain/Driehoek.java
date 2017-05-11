@@ -69,17 +69,13 @@ public class Driehoek extends Vorm{
 	}
 
 	@Override
-	public Omhullende getOmhullende() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 	
-	public Omhullende getOmHullende() {
+	@Override
+	public Omhullende getOmhullende() {
 		int minX,maxY,maxX, minY, breedte, hoogte;
 		Punt linkerbovenpunt;
 		
