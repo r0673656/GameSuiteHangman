@@ -53,23 +53,17 @@ public class HangmanPaneel extends JPanel {
 				if(input.length() > 0){
 					guess = input.charAt(0);
 				}
-				//TODO raad
-
 				woord.setText(getSpel().getHint());
 				letter.setText("");
-				getTekenVenster().teken();
-				
-				//TODO
-				//toon boodschap als gewonnen of verloren en vraag of speler opnieuw wilt spelen
-				//als de speler opnieuw wilt spelen: herzet het spel en het paneel
-				//anders stop (System.exit(0))
+				getTekenVenster().teken();			
+			
 			}
 		}
 
 		@Override
-		public void keyReleased(KeyEvent arg0) {/* Niet nodig*/}
+		public void keyReleased(KeyEvent arg0) {}
 		@Override
-		public void keyTyped(KeyEvent arg0) {/* Niet nodig*/}
+		public void keyTyped(KeyEvent arg0) {}
 	}
 	
 	private void setSpel(HangMan spel){
@@ -90,3 +84,4 @@ public class HangmanPaneel extends JPanel {
 
 		reset();
 	}
+}

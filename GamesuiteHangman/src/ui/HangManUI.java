@@ -30,7 +30,7 @@ public class HangManUI {
 		view.teken();
 
 		try {
-			HintWoord woord = new HintWoord(woordenlijst.raad());
+			HintWoord woord = new HintWoord(woordenlijst.getRandomWoord());
 			String begin = "";
 			String gelukt = "Super, doe zo voor!\n" + begin;
 			String mislukt = "Helaas, volgende keer beter!\n";
