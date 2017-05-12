@@ -68,14 +68,14 @@ public class Cirkel extends Vorm implements Drawable{
 	}
 	@Override
 	public void teken(Graphics graphics) {
-		// TODO Auto-generated method stub
-		Graphics2D graphics2D = (Graphics2D) graphics;
-		graphics2D.setStroke(new BasicStroke(5));
+		
+			Graphics2D graphics2D = (Graphics2D) graphics;
+			graphics2D.setStroke(new BasicStroke(5));
 
-		Cirkel cirkel = new Cirkel(new Punt(70, 70), 60);
-		cirkel.drawOval(cirkel.getOmhullende().getMinX(), cirkel
-				.getOmhullende().getMinY(), cirkel.getOmhullende()
-				.getBreedte(), cirkel.getOmhullende().getHoogte());
+			graphics.drawOval(this.getOmhullende().getMinX(), this.getOmhullende().getMinY(),
+					this.getOmhullende().getBreedte(), this.getOmhullende().getHoogte());
+		}
 	}
-	
-}
+
+
+
